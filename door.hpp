@@ -11,6 +11,9 @@
 
 using namespace std;
 
+/**
+ * A door within a maze.
+ */
 class door {
 protected:
     room& room1;
@@ -19,12 +22,28 @@ public:
     door(room &room1, room &room2) : room1(room1), room2(room2) {};
 };
 
+/**
+ * An enchanted door within an enchanted faery maze.
+ */
 class enchanted_door : public door {
 public:
     enchanted_door(room& a, room& b) : door(a, b) {
         room1 = a;
         room2 = b;
         cout << "Created an enchanted door between two enchanted rooms." << endl;
+    }
+};
+
+/**
+ * A dystopian door within a futuristic dystopian maze.
+ */
+class dystopian_door : public door {
+public:
+    dystopian_door(room& a, room& b) : door(a, b) {
+        room1 = a;
+        room2 = b;
+        cout << "Created a dystopian door between two dystopian rooms. The officers say big brother will let me "
+        << "through here if I behave. "<< endl;
     }
 };
 

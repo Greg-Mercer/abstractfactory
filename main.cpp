@@ -7,5 +7,8 @@ int main() {
     enchanted_maze_factory emf{};
     maze em = mg.create_maze(emf);
 
+    dystopian_maze_factory dmf{};
+    maze dm = mg.create_maze(dmf);
+
     return 0;
 }

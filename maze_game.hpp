@@ -9,8 +9,16 @@
 #include "maze.hpp"
 #include "maze_factory.hpp"
 
+/**
+ * A maze game. For creating a sample maze given a maze factory.
+ */
 class maze_game {
 public:
+    /**
+     * Creates a maze using a maze factory.
+     * @param factory the factory to make the maze with
+     * @return a new maze
+     */
     maze create_maze(maze_factory& factory) {
         maze m = factory.make_maze();
         room r1 = factory.make_room();
